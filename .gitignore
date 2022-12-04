@@ -105,7 +105,7 @@ dist
 .tern-port
 
 # IntelliJ/Webstorm
-.idea*
+.idea/
 
 # My Note don't need to push
 _note/
