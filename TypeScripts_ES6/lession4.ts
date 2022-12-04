@@ -8,4 +8,4 @@ function greetPresion(name:string) {
     console.log(greet);
     
 }
-greetPersion("Chanler");
+greetPerson("Chanler");

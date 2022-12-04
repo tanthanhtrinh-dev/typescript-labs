@@ -1,11 +1,12 @@
-function greetPerson(name:string) {
+ const greetPerson = (name:string) => {
     let greet;
     if (name === "Chandler") {
-        greet = "Hello Chanler";
+        greet = "Hello Chandler";
     } else {
         greet = "Hi there";
     }
     console.log(greet);
-    
 }
-greetPerson("Chanler");
+export {greetPerson}
+
+

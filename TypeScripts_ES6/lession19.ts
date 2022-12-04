@@ -9,7 +9,7 @@ class Person {
 class Employee extends Person {
         constructor(name: string) {
                 super(name);
-                console.log("Constructor Emplyee");
+                console.log("Constructor Employee");
         }
         getId() {
                 return super.getId();
@@ -18,3 +18,4 @@ class Employee extends Person {
 
 let emp = new Employee("Name");
 console.log(emp.getId());
+
