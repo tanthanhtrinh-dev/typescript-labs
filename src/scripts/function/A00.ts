@@ -1,4 +1,4 @@
- const greetPerson = (name:string) => {
+const greetPerson = (name: string) => {
     let greet;
     if (name === "Chandler") {
         greet = "Hello Chandler";
@@ -7,6 +7,4 @@
     }
     console.log(greet);
 }
-export {greetPerson}
-
-
+export { greetPerson }
