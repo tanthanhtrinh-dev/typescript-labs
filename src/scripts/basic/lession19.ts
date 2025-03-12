@@ -1,4 +1,4 @@
-class Person {
+class Person01 {
         constructor(name: string) {
                 console.log(name + "Person constructor");
         }
@@ -6,7 +6,7 @@ class Person {
                 return 10;
         }
 }
-class Employee extends Person {
+class Employee extends Person01 {
         constructor(name: string) {
                 super(name);
                 console.log("Constructor Employee");
