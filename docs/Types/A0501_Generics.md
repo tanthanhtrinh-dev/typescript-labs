@@ -137,3 +137,5 @@ function create<Type>(c: { new (): Type }): Type {
 
 - **A more advanced example**
 
+# [Variance Annotations](https://www.typescriptlang.org/docs/handbook/2/generics.html#generic-parameter-defaults)
+> Trong TypeScript 5.2, "Variance Annotations" là một tính năng giúp bạn kiểm soát và chỉ định biến thiên (variance) của các tham số kiểu trong generic types.

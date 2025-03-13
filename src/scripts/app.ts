@@ -1,5 +1,6 @@
 
 import { doSomething, exampleRestArgument, greeter, myFunc, printToConsole } from "./function/A03";
+import { Bee, createInstance, GenericNumber, Lion } from "./function/A05";
 
 console.info("Kick off the script");
 
@@ -11,6 +12,17 @@ console.info("Kick off the script");
 
 //doSomething(myFunc);
 
-exampleRestArgument();
+//exampleRestArgument();
+
+// let stringNumeric = new GenericNumber<string>();
+// stringNumeric.zeroValue = "";
+// stringNumeric.add = (x, y) => {
+//   return x + y;
+// };
+ 
+// console.log(stringNumeric.add(stringNumeric.zeroValue, "test"));
+
+createInstance(Lion).keeper.nametag;
+createInstance(Bee).keeper.hasMask;
 
 console.info("End of the script");

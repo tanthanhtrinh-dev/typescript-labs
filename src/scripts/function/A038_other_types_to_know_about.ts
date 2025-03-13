@@ -32,6 +32,6 @@ export function fail(msg: string): never {
  * @param f 
  * @returns 
  */
-export function doSomething(f: Function) {
+function doSomething(f: Function) {
   return f(1, 2, 3);
 }
