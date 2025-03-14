@@ -1,6 +1,6 @@
 
-import { doSomething, exampleRestArgument, greeter, myFunc, printToConsole } from "./function/A03";
-import { Bee, createInstance, GenericNumber, Lion } from "./function/A05";
+import { doSomething, exampleRestArgument, greeter, myFunc, printToConsole } from "./handbook/A03";
+import { Bee, createInstance, GenericNumber, Lion } from "./handbook/A05";
 
 console.info("Kick off the script");
 
