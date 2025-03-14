@@ -3,3 +3,8 @@ export * from "./A0502_Generic_Classes";
 export * from "./A0503_Generic_Constraints";
 export * from "./A0504_Using_Type_Parameters_in_Generic_Constraints";
 export * from "./A0505_Using_Class_Types_in_Generics";
+export * from "./A0508_Typeof_Type_Operator";
+export * from "./A0509_Indexed_Access_Types";   
+export * from "./A0510_Conditional_Type";
+export * from "./A0511_Mapped_Types";
+//export * from "./A0512_Template_Literal_Types";

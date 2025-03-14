@@ -1,6 +1,6 @@
 
-import { doSomething, exampleRestArgument, greeter, myFunc, printToConsole } from "./handbook/A03";
-import { Bee, createInstance, GenericNumber, Lion } from "./handbook/A05";
+import { Bee, ConditionalTypesExample, createInstance, GenericNumber, Lion, TypeOfExample } from "./handbook/A05";
+import { StaticBlocksExample } from "./handbook/A06";
 
 console.info("Kick off the script");
 
@@ -22,7 +22,16 @@ console.info("Kick off the script");
  
 // console.log(stringNumeric.add(stringNumeric.zeroValue, "test"));
 
-createInstance(Lion).keeper.nametag;
-createInstance(Bee).keeper.hasMask;
+// createInstance(Lion).keeper.nametag;
+// createInstance(Bee).keeper.hasMask;
+
+//TypeOfExample.Simple();
+//ConditionalTypesExample.workWithInferringTypes();
+
+//StaticBlocksExample.RunApp();
+
+StaticBlocksExample.RunCountryCodes();
+
+StaticBlocksExample.RunCountryCodes();
 
 console.info("End of the script");
