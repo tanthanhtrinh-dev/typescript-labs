@@ -27,7 +27,9 @@ class ClassName {
 ## Basic Example: Initializing Static Properties
 
 ```typescript
+
 class Config {
+
     static readonly API_URL: string;
     static readonly TIMEOUT: number = 5000;
 

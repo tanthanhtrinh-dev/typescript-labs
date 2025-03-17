@@ -1,6 +1,6 @@
 
 import { Bee, ConditionalTypesExample, createInstance, GenericNumber, Lion, TypeOfExample } from "./handbook/A05";
-import { StaticBlocksExample } from "./handbook/A06";
+import { ConstructorSignature, GenericClassExample, RelationshipsBetweenClasses, StaticBlocksExample } from "./handbook/A06";
 
 console.info("Kick off the script");
 
@@ -30,8 +30,14 @@ console.info("Kick off the script");
 
 //StaticBlocksExample.RunApp();
 
-StaticBlocksExample.RunCountryCodes();
+//StaticBlocksExample.RunCountryCodes();
 
-StaticBlocksExample.RunCountryCodes();
+//StaticBlocksExample.RunCountryCodes();
+
+//GenericClassExample.AvoidingThisIssues();
+
+//ConstructorSignature.UsingEnforcingConstructorParameters();
+
+RelationshipsBetweenClasses.DependencyInjection();
 
 console.info("End of the script");

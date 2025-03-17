@@ -71,3 +71,12 @@ const pair2 = new Pair<number, boolean>(1, true);
 console.log(pair2.getKeyValue()); // ✅ "1: true"
 
 ```
+
+
+## When to Use Generic Classes?
+
+- When creating reusable data structures (e.g., `Stack<T>`, `Queue<T>`).
+- When working with dynamic object types (e.g., API models).
+- When ensuring type safety while maintaining flexibility.
+- When designing consistent interfaces for different types.
+
