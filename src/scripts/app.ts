@@ -1,6 +1,4 @@
 
-import { Bee, ConditionalTypesExample, createInstance, GenericNumber, Lion, TypeOfExample } from "./handbook/A05";
-import { ConstructorSignature, GenericClassExample, RelationshipsBetweenClasses, StaticBlocksExample } from "./handbook/A06";
 
 console.info("Kick off the script");
 
@@ -38,6 +36,16 @@ console.info("Kick off the script");
 
 //ConstructorSignature.UsingEnforcingConstructorParameters();
 
-RelationshipsBetweenClasses.DependencyInjection();
+//RelationshipsBetweenClasses.DependencyInjection();
+
+import { add, multiply } from "./modules/A07";
+import { greet } from "./modules/A07"
+//import greet from "./modules/greetings"
+
+// console.log(add(2, 3));       // ✅ 5
+// console.log(multiply(4, 5));  // ✅ 20
+
+console.log(greet("Charlie"));
+
 
 console.info("End of the script");
