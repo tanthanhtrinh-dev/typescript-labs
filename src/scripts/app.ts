@@ -1,6 +1,6 @@
 console.info("Kick off the script");
 import { greet } from "./modules/A07"
-import { PartialExample, RequiredExample } from "./utilities";
+import { OmitExample, PartialExample, RequiredExample } from "./utilities";
 
 //greetPerson("Tan Trinh 123");
 //console.info(`${typeof(greetPerson)} - ${greetPerson.prototype.constructor.name}`);
@@ -47,7 +47,10 @@ import { PartialExample, RequiredExample } from "./utilities";
 //console.log(greet("Charlie"));
 
 
-RequiredExample.RequiredNestedObjects();
+//RequiredExample.RequiredNestedObjects();
 
+OmitExample.OmitNestedObjects();
+
+OmitExample.DeepOmitNestedObjects();
 
 console.info("End of the script");

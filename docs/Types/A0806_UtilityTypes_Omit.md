@@ -18,7 +18,6 @@ type Omit<Type, Keys extends keyof Type> = {
 ✅ Prevents exposure of sensitive data.
 ✅ Helps create modified versions of types for different use cases.
 
-
 ## `Omit<T, K>` vs `Pick<T, K>`
 
 | Utility Type | What It Does                | Use Case                |
