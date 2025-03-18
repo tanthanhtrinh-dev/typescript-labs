@@ -5,6 +5,14 @@ interface User {
     email: string;
     age: number;
     password: string;
+    profile: {
+        age: number;
+        address: {
+            city: string;
+            zip: number;
+            country: string;
+        };
+    };
 }
 
 interface UserProfile {
@@ -15,6 +23,7 @@ interface UserProfile {
         zip: number;
         country: string;
     };
+
 }
 
 // type DeepOmit<T, K extends keyof T> = {
@@ -23,6 +32,12 @@ interface UserProfile {
 
 type DeepOmit<T, K extends keyof any> = {
     [P in keyof T as P extends K ? never : P]: T[P] extends object ? DeepOmit<T[P], K> : T[P];
+};
+
+type UserWithoutPassword = Omit<User, "password"> & {
+    profile: Omit<User["profile"], "address"> & {
+        address: Omit<User["profile"]["address"], "zip">
+    };
 };
 
 export class OmitExample {
@@ -36,7 +51,7 @@ export class OmitExample {
      */
     static Sample() {
 
-        type UserWithoutEmail = Omit<User, "email" | "password">;
+        type UserWithoutEmail = Omit<User, "email" | "password" | "profile">;
 
         const user: UserWithoutEmail = {
             id: 1,
@@ -60,7 +75,7 @@ export class OmitExample {
      * 
      */
     static OmitApiResponses() {
-        type UserPublicData = Omit<User, "id" | "email" | "password">;
+        type UserPublicData = Omit<User, "id" | "email" | "password" | "profile">;
 
         const publicUser: UserPublicData = {
             name: "Charlie",
@@ -81,7 +96,7 @@ export class OmitExample {
      */
     static OmitFunctionParameters() {
 
-        function updateUser(userId: number, updates: Omit<User, "id" | "password">) {
+        function updateUser(userId: number, updates: Omit<User, "id" | "password" | "profile">) {
             console.log(`Updating user ${userId} with`, updates);
         }
 
@@ -96,6 +111,7 @@ export class OmitExample {
      * 
      */
     static OmitNestedObjects() {
+
         type WithoutAddress = Omit<UserProfile, "address">;
 
         const profile: WithoutAddress = { name: "David", email: "a123@gmail.com" }; // ✅ Works
@@ -133,4 +149,28 @@ export class OmitExample {
         console.info(userWithoutZip);
 
     }
+
+    /**
+     * Alternative Approach: Omit with Pick for Nested Fields
+     * Instead of `DeepOmit<T, K>`, another approach is using `Omit<T, K>` with `Pick<T, K>`.
+     * Example: Using Omit and Pick Together
+     * 
+     */
+    static OmitPickNestedFields(){
+        const apiUser2: UserWithoutPassword = {
+            id: 1,
+            name: "Eve",
+            email: "eve@example.com",
+            age: 12,
+            profile: {
+                age: 28,
+                address: {
+                    city: "San Diego",
+                    country: "USA",
+                    //zip: 7000
+                }
+            }
+        }; // ✅ Works fine
+    }
+
 }
