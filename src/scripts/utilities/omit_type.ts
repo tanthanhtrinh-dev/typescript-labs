@@ -167,7 +167,7 @@ export class OmitExample {
                 address: {
                     city: "San Diego",
                     country: "USA",
-                    //zip: 7000
+                    zip: 7000
                 }
             }
         }; // ✅ Works fine
